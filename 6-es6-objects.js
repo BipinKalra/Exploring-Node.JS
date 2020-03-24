@@ -40,8 +40,10 @@ console.log(something) // Now something does get a value as we can specify defau
 
 // Destructuring an object right when it is passed to a function so that the function then has access to 
 // only the inner variables and not the complete object
-const transaction = (type, {label, stock}) => {
+const transaction = (type, {label, stock = 0} = {}) => {
+  // Herein the default value handles the case where no object is passed to the function as it would throw an error
   console.log(type, label, stock)
 }
 
 transaction("order", product)
+transaction("order")
