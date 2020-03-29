@@ -1,3 +1,26 @@
+// Callback example for promise file (9-promises.js)
+const doWorkCallback = (callback) => {
+  setTimeout(() => {
+    // callback("This is my error!", undefined)
+    callback(undefined, [1,2,3,4])
+  }, 2000)
+}
+
+doWorkCallback((error, result) => {
+  if (error) {
+    return console.log(error)
+  }
+
+  console.log(result)
+})
+
+
+
+
+
+
+
+
 // setTimeout(() => {
 //   console.log("2 seconds have passed")
 // }, 2000)
@@ -15,36 +38,36 @@
 
 // This wouldn't work in case of async examples as in case of an async function, callback wouldn't get executed
 // till the main function ends and data is being returned by the callback and not by a function in main
-const geocodeNotWorking = (address, callback) => {
-  setTimeout(() => {
-    const data = {
-      latitude: 0,
-      longitude: 0
-    }
+// const geocodeNotWorking = (address, callback) => {
+//   setTimeout(() => {
+//     const data = {
+//       latitude: 0,
+//       longitude: 0
+//     }
 
-    return data
-  }, 2000)
-}
+//     return data
+//   }, 2000)
+// }
 
-const data = geocodeNotWorking("Something")
-console.log(data) // We end up seeing undefined because of this as data isnt being returned by geocode function but rather by the setTimeout function which uses callback pattern
+// const data = geocodeNotWorking("Something")
+// console.log(data) // We end up seeing undefined because of this as data isnt being returned by geocode function but rather by the setTimeout function which uses callback pattern
 
 
 // Working code using callback pattern
-const geocode = (address, callback) => {
-  setTimeout(() => {
-    const data = {
-      latitude: 0,
-      longitude: 0
-    }
+// const geocode = (address, callback) => {
+//   setTimeout(() => {
+//     const data = {
+//       latitude: 0,
+//       longitude: 0
+//     }
 
-    callback(data)
-  }, 2000)
-}
+//     callback(data)
+//   }, 2000)
+// }
 
-geocode("Something", (data) => {
-  console.log(data)
-})
+// geocode("Something", (data) => {
+//   console.log(data)
+// })
 
 
 // const add = (a,b,callback) => {
