@@ -15,11 +15,7 @@ doWorkCallback((error, result) => {
 })
 
 
-
-
-
-
-
+// DEPRECATED CODE FOR LEARNING
 
 // setTimeout(() => {
 //   console.log("2 seconds have passed")

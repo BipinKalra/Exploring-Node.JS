@@ -1,17 +1,3 @@
-// const square = function (x) {
-//   return x*x
-// }
-
-// // Arrow function long syntax
-// const square = (x) => {
-//   return x*x
-// }
-
-// //Arrow function short syntax
-// const square = (x) => x*x
-
-// console.log(square(4))
-
 const event = {
   name: "Birthday",
   guestList: ["Bipin", "Himanshi", "Nomit"],
@@ -20,7 +6,7 @@ const event = {
   // }
 
   //Arrow function Syntax for methods
-  
+
   // printGuestList: () => {
   //   console.log("Guest List For " + this.name)
   // }
@@ -47,3 +33,19 @@ const event = {
 }
 
 event.printGuestList()
+
+// DEPRECATED CODE FOR LEARNING
+
+// const square = function (x) {
+//   return x*x
+// }
+
+// // Arrow function long syntax
+// const square = (x) => {
+//   return x*x
+// }
+
+// //Arrow function short syntax
+// const square = (x) => x*x
+
+// console.log(square(4))
